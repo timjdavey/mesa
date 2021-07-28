@@ -509,7 +509,7 @@ class SingleGrid(Grid):
         if x == "random" or y == "random":
             if len(self.empties) == 0:
                 raise Exception("ERROR: Grid full")
-            coords = agent.random.choice(sorted(self.empties))
+            coords = agent.random.choice(list(self.empties))
         else:
             coords = (x, y)
         agent.pos = coords
